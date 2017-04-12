@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>中期检查</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--自定义样式-->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="themes">
+					<h2>选择主题</h2>
+					<p>
+							
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					</p>
+				</section>
+				<section id="transitions">
+					<h2>动画样式</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
+				<section>
+					<h1>文正学院实验考勤管理系统的设计与实现</h1>
+					<h3>中期检查</h3>
+					<p>
+						<small>汇报人 <a href="http://hakim.se">耿鹏</a>  <a href="http://twitter.com/hakimel"></a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>什么是实验考勤管理系统？</h2>
+					<p>
+						实验考勤管理系统是一个实现考勤管理自动化的系统，代替原先学生手写签到和老师点名记录等方式，节约了人力，高效，快捷。
+					</p>
+				</section>
+				<section>
+					<h2>设计框架</h2>
+					<p>MVC经典模式</p>
+					<!--<p>Use the <em>Space</em> key to navigate through all slides.</p>-->
+					<br>
+					<a href="#" class="navigate-down">
+						<img width="308" height="238" data-src="images/mvc.png" alt='mvc模型'>
+					</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					
+					<section>
+						<h2>视图层的技术React.js</h2>
+						<p class='_alignL'>"A JavaScript library for building user interfaces."</p>
+						<p class='_alignL'>"We built React to solve one problem: building large applications with data that changes over time."</p>
+						<p class='_alignR'><a href="https://facebook.github.io/react/">————react.js官网</a></p>
+					</section>
+					<section>
+						<h2>React特点</h2>
+						<ul>
+							<li class="_alignL">不是一个 MVC 框架，仅仅是一个UI框架</li>
+							<li class="_alignL">虚拟的DOM节点</li>
+							<li class="_alignL">React采用不同的渲染方法。（首次渲染和非首次渲染不同）</li>
+							<li class="_alignL">单向响应的数据流</li>
+							<li class="_alignL">使用JSX语法</li>
+						</ul>
+						<!--<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>-->
+					</section>
+				</section>
+				<section>
+					
+					<section>
+						<h2>Model层的技术Redux</h2>
+						<p class='_alignL'>"Redux is a predictable state container for JavaScript apps."</p>
+						<p class='_alignL'>"You can only solve the problem that React can not solve it."</p>
+						<p class='_alignR'><a href="http://redux.js.org/"> —————Dan Abramov </a></p>
+					</section>
+					<section>
+						<h2>DVA————基于redux的封装</h2>
+						<p class='_alignL'>dva 是基于现有应用架构 (redux + react-router + redux-saga 等)的一层轻量封装，没有引入任何新
+							概念，全部代码不到 100 行。( Inspired by elm and choo. )dva 是 framework，不是 library，
+							类似 emberjs，会很明确地告诉你每个部件应该怎么写。另外，除了 react 和 react-dom 是 peerDependencies
+							 以外，dva 封装了所有其他依赖。dva 实现上尽量不创建新语法，而是用依赖库本身的语法，
+							 比如 router 的定义还是用 react-router 的 JSX 语法的方式</p>
+					</section>
+				</section>
+				<section>
+					
+					<section>
+						<h2>Controller层的技术———node.js</h2>
+						
+						<p class='_alignL'>"Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."</p>
+						<p class='_alignL'>"Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world."</p>
+						<p class='_alignR'><a href="https://nodejs.org/en/"> —————node.js官网 </a></p>
+					</section>
+					<section>
+						<h2>Koa2———node.js</h2>
+						<ul>
+							<li class="_alignL">中间件的执行顺序</li>
+							<li class="_alignL">async await语法支持</li>
+							<li class="_alignL">封装了node中的request和response。</li>
+						</ul>
+					</section>
+				</section>
+
+				
+				<section id="fragments">
+					<h2>功能</h2>
+					<p class="fragment">用户管理</p>
+					<p class="fragment">部门管理</p>
+					<p class="fragment">位置管理</p>
+					<p class="fragment">设备管理</p>
+					<p class="fragment">考勤查询</p>
+					<p class="fragment">考勤分析</p>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>实现效果图</h2>
+					<p>
+						<img width="950" height="450" data-src="images/gongneng1.png" alt="功能展示图片1">
+					</p>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>实现效果图</h2>
+					<p>
+						<img width="950" height="450" data-src="images/gongneng2.png" alt="功能展示图片2">
+					</p>
+				</section>
+				<section data-transition="slide" data-background="#8dcffc" data-background-transition="concave">
+					<h2>实现效果图</h2>
+					<p>
+						<img width="950" height="450" data-src="images/gongneng3.png" alt="功能展示图片3">
+					</p>
+				</section>
+				<section>
+					<h1>结束</h1>
+					<h4>谢谢欣赏</h4>
+					
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
